@@ -1,0 +1,38 @@
+MYDU
+
+Name
+	mydu - An implementation of the command du (estimate file space usage) in C
+
+Synopsis
+	mydu [OPTION]... [FILE]
+
+Description
+	-a show counts for all files
+
+	-s Display only a total for each argument
+
+	-h Append the correct M, G, B for size (Megabyte, Gigabyte, Byte, ensure power of 1024)
+
+	-H same as -h except use powers of 1000 instead of 1024
+
+	-k translate block size to kb 
+
+	-L dereference symbolic linls
+
+	-x FILE will exclude based on patterns supplied from the FILE, one per line
+	if FILE == '-' then take from stdin
+
+Bugs:
+	Crash on invalid argument
+	-h and -H create crash. They are currently disabled.
+	-x has not been implemented
+	File size does not always match du as expected
+	This is not a correctly optimised program and experiences memory leak. 
+		Only a noticeable on very large directory trees. 
+	
+Notes:
+	This 'mydu' does support the output of multiple parameter files
+		ex: 'mydu /classes /boot' will output the files of /classes followed by /boot
+	
+Author
+	Jason Rooneo

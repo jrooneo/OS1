@@ -1,0 +1,16 @@
+Dealing with different arguments:
+-a show counts for all files
+	or 
+-s Display only a total for each argument
+
+-h Append the correct M, G, B for size (Megabyte, Gigabyte, Byte, ensure power of 1024)
+
+-H same as -h except use powers of 1000 instead of 1024
+
+-k translate block size to kb 
+
+-L dereference symbolic linls
+
+-x FILE will exclude based on patterns supplied from the FILE, one per line
+if FILE == '-' then take from stdin
+ hg
